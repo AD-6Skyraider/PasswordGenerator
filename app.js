@@ -42,14 +42,14 @@ function getRandomNumber (){
 console.log(getRandomNumber()); // Random number from the "numbers" string.
 
 // Function that returns a random symbol
-function getRandomSymbol(``){
+function getRandomSymbol(){
     const symbols = `!@#$%^&*(){}[]=<>/,.`;
     // Returning a random letter using a random index in the "letters" string.
     return symbols[randomIndex(symbols)];
 }
 
 // Example of the getRandomSymbol function.
-console.log((getRandomSymbol)); // Random symbol from the "symbols" string.
+console.log(getRandomSymbol()); // Random symbol from the "symbols" string.
 
 // Object to store all the character generator functions.
 const randomFunctions = {
@@ -59,3 +59,12 @@ const randomFunctions = {
     symbol: getRandomSymbol
 };
 
+// Selecting the DOM Elements
+const resultEL = document.querySelector(`#result`);
+const clipboardEL = document.querySelector(`#clipboard`);
+const lowercaseEL = document.querySelector(`#lowercase`);
+const uppercaseEL = document.querySelector(`#uppercase`);
+const numbersEL = document.querySelector(`#numbers`);
+const symbolsEL = document.querySelector(`#symbols`);
+const lengthEL = document.querySelector(`#length`);
+const generateEL = document.querySelector(`#generate`);
