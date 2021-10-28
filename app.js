@@ -132,3 +132,22 @@ return finalPassword;
 // Example of generatePassword function.
 // NOTE: Using the starting value for when the page first loads.
 generatePassword(true, true, true, true, 10);
+
+// Event listener for when the "Generate Password" button is clicked. 
+generateEL.addEventListener(`click`, () => {
+    // Checking if the following options are selected/checked and setting the true or false values to the respective variable.
+    const hasLower = lowercaseEL.checked;
+    const hasUpper = uppercaseEL.checked;
+    const hasNumber = numbersEL.checked;
+    const hasSymbol = symbolsEL.checked;
+    
+    // Accessing the value for the number input and changing the value from a string to a number.
+    // NOTE: The value returned from a number input is a string value. 
+    const length = parseInt(lengthEL.Value);
+
+    console.log(hasLower, hasUpper, hasNumber, hasSymbol, length);
+
+// The generatePassword function takes the true false values determined by the checkboxes as well as the number input as arguments and returns a string (the password) which is set as the innerText value for the "result" (span) element. 
+resultEL.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+});
+
